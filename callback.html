@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TikTok OAuth Callback</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; }
+        .code { background: #f0f0f0; padding: 20px; margin: 20px; font-size: 18px; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <h1>✅ Autorisation réussie !</h1>
+    <p>Copiez le code ci-dessous et collez-le dans votre terminal :</p>
+    <div class="code" id="code">Chargement...</div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        document.getElementById('code').textContent = code || 'Code non trouvé';
+    </script>
+</body>
+</html>
